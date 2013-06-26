@@ -127,6 +127,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		         var infoObj = JSON.parse(value);
 		         var createSubList = document.createElement('ul');
 		         makeLi .appendChild(createSubList);
+		         getImage(infoObj.platform[1], createSubList);
 		         for(var y in infoObj){
 		            var createSubli = document.createElement('li');
 		            createSubList.appendChild(createSubli);
@@ -139,6 +140,15 @@ window.addEventListener("DOMContentLoaded", function(){
 		      }
 		    
 		   }
+		   
+		   // Get Platform Type Image
+		   function getImage(platformName,createSubList) {
+			   var imgLi = document.createElement('li');
+			   createSubList.appendChild(imgLi);
+			   var newImg = document.createElement('img');
+			   var setSrc = newImg.setAttribute("src", "img/"+ platformName + ".png");
+			   imgLi.appendChild(newImg);
+		   };
 
 	// Autofill Data 
 	function autoFillData() {
@@ -324,7 +334,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
    	// Variable defaults
-	var readPlatform = ["-- Choose A Platform --", "Book - Paperback", "Book - Hardcover", "Book - Other", "Digital - Personal Computer", "Digital - Tablet/eReader", "Digital - Other"], 
+	var readPlatform = ["-- Choose A Platform --", "Book - Paperback", "Book - Hardcover", "Book - Other", "Digital - Personal Computer", "Digital - Tablet", "Digital - Other"], 
 	completedValue, 
 	favoriteValue = "No"; errMsg = $('errors');
     makePlatforms();
