@@ -108,7 +108,8 @@ window.addEventListener("DOMContentLoaded", function(){
        function displayData(){
        toggleControls("on");
        if(localStorage.length === 0) {
-	       alert("There is no data in Local Storage");
+	       alert("There is currently no data in local storage. Default data added.");
+	       autoFillData();
        }
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
@@ -138,6 +139,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		      }
 		    
 		   }
+
+	// Autofill Data 
+	function autoFillData() {
+		// the JSON object data required for this to work is coming from json.js, which is loaded in my HTML page
+		// store json object in Local storage 
+		for(var n in json) {
+			var id = Math.floor(Math.random()*10000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+	}
 
 
     // Make Item Links
