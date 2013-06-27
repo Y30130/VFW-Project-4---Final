@@ -33,10 +33,9 @@ input[type='text'], input[type='number'], textarea, select, input[type='date'] {
 body {
 	margin: 10px 0px;
 	padding: 0px;
-	font-family: Verdana, Tahoma, Arial, sans-serif;
-	font-size: 15px;
+font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;	font-size: 15px;
 	height: 100%;
-	background: #000;
+	background: #A63100;
 	color: #f1f1f1;
 }
 
@@ -50,27 +49,21 @@ body {
 }
 
 #wrap {
-	border: 1px solid #002020;
-	background: rgb(238,238,238); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(238,238,238,1)), color-stop(100%, rgba(204,204,204,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc', GradientType=0 ); /* IE6-9 */
+	border: 1px solid #95002B;
+	background: #00AE68; /* Old browsers */
 	margin: 0px 2%;
 }
 /* Link Stlying */
 a:link {
-	color: teal;
+	color: #FFF;
 	text-decoration: none;
 }
 
-a:visited { color: teal; }
+a:visited { color: #FFF; }
 
 a:hover, a:focus {
-	color: #999;
+	color: #AC2B50;
+	
 	cursor: hand;
 }
 
@@ -79,8 +72,8 @@ a:active { color: #FFF; }
 /* Header Styles */
 
 h1 {
-	color: teal;
-	background: rgba(0,0,0,0.75);
+	color: #FF9400;
+	background: #95002B;
 	padding: 10px;
 	text-align: center;
 	margin: 0px;
@@ -89,12 +82,12 @@ h1 {
 }
 
 h2 {
-	color: #002020;
-	text-shadow: 1px 1px 1px #EEE;
+	color:#95002B;
+	text-transform: uppercase;
 }
 
 header {
-	background: teal;
+	background: #;
 	margin: 0px;
 }
 
@@ -141,11 +134,12 @@ form {
 	color: #111;
 	text-shadow: none;
 	margin: 0px;
-	max-width: 780px;
 	overflow: hidden;
 }
 
-form legend { clear: both; }
+#BookeepTitle {width:50%;margin:0px auto;}
+
+form legend { clear: both; color:#FFF; text-transform: uppercase; margin:0px auto; font-size:20px; }
 
 form .headLabel {
 	clear: both;
@@ -156,15 +150,17 @@ form .headLabel {
 	margin-bottom: 20px;
 }
 
-form fieldset { border: 0px #002020 solid; }
+form fieldset { border: 0px #002020 solid;max-width: 768px;
+min-width: 300px; }
 
 form#bookeepForm p {
 	margin: 10px 0px 0px 0px;
 	overflow: hidden;
+	clear:both;
 }
 
 form#bookeepForm label {
-	background: teal;
+	background: #95002B;
 	color: #FFF;
 	padding: 10px 10px;
 	clear: both;
@@ -182,6 +178,7 @@ form#bookeepForm input {
 	border: 1px solid teal;
 	line-height: 14px;
 	float: left;
+	
 }
 
 form#bookeepForm textarea {
@@ -194,6 +191,22 @@ form#bookeepForm textarea {
 	border: 1px solid teal;
 	line-height: 14px;
 	float: left;
+}
+
+input#submit {
+	margin-right: 10%!important;
+	background:#95002B;
+	color:#FFF;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size:14px;
+	float:right!important;
+}
+
+#platforms {
+	clear:both;
+	float:left;
+	margin:10px 0px;
 }
 
 
@@ -215,16 +228,18 @@ max-width: 768px;
 min-width: 300px;
 width: auto;
 padding-left: 2.333%;
-padding-right: 2.333%;}
-#items ul {list-style-type: none;}
+padding-right: 2.333%;
+color:#FFC473;}
+#items ul {list-style-type: none;margin-left: -15px;margin-right: 10px;}
+#items ul li {list-style-type: none;margin-left:0px;background:#007143;margin-left:-13px;padding-left:33px;}
+#items ul li ul {margin-bottom:25px;padding:10px 0px;}
 
 /* Footer */
 footer {
 	clear: both;
 	font-size: 12px;
-	background: #000;
 	color: #FFF;
-	padding: 5px 10px;
+	padding: 5px 15px;
 	margin: 0px;
 	text-shadow: none;
 }
